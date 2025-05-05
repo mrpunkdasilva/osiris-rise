@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE categories
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/categories.dtd">
+<categories>
+    <category id="overview" name="Visão Geral" order="1"/>
+    <category id="requirements" name="Requisitos" order="2"/>
+    <category id="architecture" name="Arquitetura" order="3"/>
+    <category id="features" name="Funcionalidades" order="4"/>
+    <category id="user-guides" name="Guias de Usuário" order="5"/>
+</categories>

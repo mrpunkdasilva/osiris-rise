@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="osiris"
+                 name="Osiris Rise"
+                 start-page="welcome.md">
+
+    <toc-element topic="welcome.md"/>
+    <toc-element topic="introduction.md"/>
+    
+    <toc-element toc-title="Requisitos">
+        <toc-element topic="functional-requirements.md"/>
+        <toc-element topic="non-functional-requirements.md"/>
+    </toc-element>
+    
+    <toc-element toc-title="Arquitetura">
+        <toc-element topic="architecture-overview.md"/>
+        <toc-element topic="data-model.md"/>
+    </toc-element>
+    
+    <toc-element toc-title="Funcionalidades">
+        <toc-element topic="authentication.md"/>
+        <toc-element topic="relapse-counter.md"/>
+        <toc-element topic="workout-system.md"/>
+        <toc-element topic="habit-tracking.md"/>
+        <toc-element topic="gamification.md"/>
+    </toc-element>
+    
+    <toc-element toc-title="Guias de Usuário">
+        <toc-element topic="getting-started.md"/>
+        <toc-element topic="tracking-progress.md"/>
+    </toc-element>
+</instance-profile>

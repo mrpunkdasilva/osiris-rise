@@ -92,3 +92,47 @@ Este é um projeto open source e suas contribuições são bem-vindas!
 ## Recursos Adicionais
 
 Para mais informações sobre o uso do Angular CLI, incluindo referências detalhadas de comandos, visite a página [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).
+
+# Executando com Docker
+
+## Ambiente de Desenvolvimento
+
+Para iniciar o ambiente de desenvolvimento com hot-reload:
+
+```bash
+docker-compose -f docker-compose.dev.yml up
+```
+
+Acesse a aplicação em `http://localhost:4200`
+
+## Ambiente de Produção
+
+Para construir e iniciar a aplicação em modo de produção:
+
+```bash
+docker-compose up --build
+```
+
+Acesse a aplicação em `http://localhost:80`
+
+## Comandos Úteis
+
+### Visualizar logs
+```bash
+docker-compose logs -f frontend
+```
+
+### Executar comandos no container
+```bash
+docker-compose exec frontend sh
+```
+
+### Parar todos os containers
+```bash
+docker-compose down
+```
+
+### Remover volumes (cuidado, isso apagará os dados do banco)
+```bash
+docker-compose down -v
+```

@@ -96,7 +96,7 @@ Para iniciar o ambiente de desenvolvimento com hot-reload:
 docker-compose -f docker-compose.dev.yml up
 ```
 
-Acesse a aplicação em `http://localhost:4200`
+Acesse a aplicação em `http://localhost:4201`
 
 ### Ambiente de Produção
 

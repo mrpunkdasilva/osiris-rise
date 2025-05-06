@@ -7,7 +7,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile.dev
     ports:
-      - "4200:4200"
+      - "4201:4200"  # Alterado para usar a porta 4201 no host
     volumes:
       - ./frontend:/app
       - /app/node_modules
@@ -21,7 +21,7 @@ services:
   db:
     image: postgres:15-alpine
     ports:
-      - "5432:5432"
+      - "5433:5432"  # Alterado para usar a porta 5433 no host
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:

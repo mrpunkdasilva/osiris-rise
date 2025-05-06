@@ -7,324 +7,523 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <div class="hero-section">
-      <div class="hero-content">
-        <h1>Transforme sua vida com <span class="highlight">Osiris Rise</span></h1>
-        <p class="hero-subtitle">
-          Supere vícios, construa hábitos saudáveis e acompanhe sua evolução através de uma
-          jornada gamificada inspirada na mitologia egípcia.
-        </p>
-        <div class="cta-buttons">
-          <a routerLink="/auth/register" class="btn btn-primary">Comece Agora</a>
-          <a routerLink="/auth/login" class="btn btn-secondary">Já tenho uma conta</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <!-- Placeholder para imagem -->
-        <div class="image-placeholder">
-          <div class="placeholder-icon">🏆</div>
-        </div>
-      </div>
-    </div>
+    <div class="home-container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="cyber-grid"></div>
+        <div class="scanline"></div>
 
-    <div class="features-section">
-      <h2>Recursos Principais</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">⏱️</div>
-          <h3>Contador de Recaídas</h3>
-          <p>Acompanhe seu progresso na superação de vícios com métricas detalhadas e insights personalizados.</p>
-        </div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <div class="hero-badge">TRANSFORMAÇÃO PESSOAL GAMIFICADA</div>
+            <h1 class="hero-title">
+              DESPERTE SEU <span class="text-gradient">POTENCIAL</span>
+              <br>COM <span class="text-accent">OSIRIS RISE</span>
+            </h1>
+            <p class="hero-description">
+              Supere vícios, construa hábitos saudáveis e acompanhe sua evolução através de uma
+              jornada gamificada inspirada na mitologia egípcia e potencializada por tecnologia futurista.
+            </p>
 
-        <div class="feature-card">
-          <div class="feature-icon">🔄</div>
-          <h3>Sistema de Hábitos</h3>
-          <p>Desenvolva rotinas saudáveis com nosso sistema de rastreamento de hábitos baseado em evidências científicas.</p>
-        </div>
+            <div class="hero-cta">
+              <a routerLink="/auth/register" class="btn btn-primary btn-glow">
+                INICIAR JORNADA
+                <span class="btn-icon">→</span>
+              </a>
+              <a routerLink="/features" class="btn btn-secondary btn-glow">
+                EXPLORAR RECURSOS
+              </a>
+            </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">💪</div>
-          <h3>Gerenciamento de Treinos</h3>
-          <p>Crie e acompanhe treinos personalizados para melhorar sua saúde física e mental.</p>
-        </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-value">10K+</div>
+                <div class="stat-label">USUÁRIOS</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-value">87%</div>
+                <div class="stat-label">TAXA DE SUCESSO</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-value">4.8/5</div>
+                <div class="stat-label">AVALIAÇÃO</div>
+              </div>
+            </div>
+          </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">🎮</div>
-          <h3>Gamificação</h3>
-          <p>Mantenha-se motivado com elementos de jogos como pontos, níveis e conquistas inspirados na mitologia egípcia.</p>
+          <div class="hero-visual">
+            <div class="logo-container">
+              <img src="assets/images/osiris-logo.svg" alt="Osiris Rise Logo" class="hero-logo">
+              <div class="logo-glow"></div>
+            </div>
+            <div class="hieroglyphs top-hieroglyphs">𓀀 𓀁 𓀂 𓀃 𓀄 𓀅 𓀆 𓀇 𓀈 𓀉</div>
+            <div class="hieroglyphs bottom-hieroglyphs">𓀊 𓀋 𓀌 𓀍 𓀎 𓀏 𓀐 𓀑 𓀒 𓀓</div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="testimonials-section">
-      <h2>O que nossos usuários dizem</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Osiris Rise mudou completamente minha relação com hábitos saudáveis. A gamificação torna tudo mais divertido e motivador."</p>
-          <div class="testimonial-author">- Carlos S.</div>
+      <!-- Features Preview Section -->
+      <section class="features-section">
+        <div class="container">
+          <h2 class="section-title">RECURSOS <span class="text-gradient">PRINCIPAIS</span></h2>
+          <p class="section-subtitle">Ferramentas poderosas para sua jornada de transformação</p>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔄</div>
+              <h3 class="feature-title">Jornada Personalizada</h3>
+              <p class="feature-description">
+                Crie sua própria jornada baseada em seus objetivos e desafios pessoais.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3 class="feature-title">Análise de Progresso</h3>
+              <p class="feature-description">
+                Acompanhe sua evolução com métricas detalhadas e visualizações intuitivas.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🏆</div>
+              <h3 class="feature-title">Sistema de Recompensas</h3>
+              <p class="feature-description">
+                Ganhe recompensas virtuais e desbloqueie conquistas ao atingir seus objetivos.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">👥</div>
+              <h3 class="feature-title">Comunidade de Apoio</h3>
+              <p class="feature-description">
+                Conecte-se com outros usuários em jornadas semelhantes para motivação mútua.
+              </p>
+            </div>
+          </div>
+
+          <div class="features-cta">
+            <a routerLink="/features" class="btn btn-secondary btn-glow">VER TODOS OS RECURSOS</a>
+          </div>
         </div>
+      </section>
 
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Depois de várias tentativas frustradas, finalmente consegui superar meu vício em redes sociais graças ao contador de recaídas."</p>
-          <div class="testimonial-author">- Ana P.</div>
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="cta-title">PRONTO PARA INICIAR SUA <span class="text-gradient">TRANSFORMAÇÃO</span>?</h2>
+            <p class="cta-description">
+              Junte-se a milhares de pessoas que estão transformando suas vidas com Osiris Rise.
+            </p>
+            <a routerLink="/auth/register" class="btn btn-primary btn-large btn-glow">
+              COMEÇAR AGORA
+              <span class="btn-icon">→</span>
+            </a>
+          </div>
         </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"O sistema de treinos personalizados é incrível! Consigo acompanhar meu progresso e me manter motivado."</p>
-          <div class="testimonial-author">- Rafael M.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cta-section">
-      <h2>Pronto para iniciar sua jornada?</h2>
-      <p>Junte-se a milhares de pessoas que estão transformando suas vidas com Osiris Rise.</p>
-      <a routerLink="/auth/register" class="btn btn-primary btn-large">Comece Gratuitamente</a>
+      </section>
     </div>
   `,
   styles: [`
-    :host {
-      display: block;
-      font-family: 'Roboto', sans-serif;
-      color: #333;
+    .home-container {
+      position: relative;
     }
 
+    /* Hero Section */
     .hero-section {
+      position: relative;
+      min-height: 90vh;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
-      color: white;
-      border-radius: 0 0 50px 50px;
-      margin-bottom: 4rem;
+      overflow: hidden;
+      padding: var(--spacing-xxl) 0;
+      background-color: var(--color-bg-dark);
+    }
+
+    .cyber-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        linear-gradient(rgba(231, 76, 60, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(231, 76, 60, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: 1;
+      perspective: 1000px;
+      transform: rotateX(45deg) scale(2);
+      transform-origin: center bottom;
+      opacity: 0.3;
+    }
+
+    .scanline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(to bottom,
+        rgba(231, 76, 60, 0) 0%,
+        rgba(231, 76, 60, 0.3) 50%,
+        rgba(231, 76, 60, 0) 100%);
+      z-index: 2;
+      animation: scanline 8s linear infinite;
+      opacity: 0.5;
     }
 
     .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-text {
       flex: 1;
       max-width: 600px;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
+    .hero-badge {
+      display: inline-block;
+      background: rgba(231, 76, 60, 0.1);
+      color: var(--color-primary);
+      padding: var(--spacing-xs) var(--spacing-md);
+      border-left: 3px solid var(--color-primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .hero-title {
+      font-size: 3rem;
       line-height: 1.2;
-    }
-
-    .highlight {
-      color: #e74c3c;
+      margin-bottom: var(--spacing-lg);
       font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-    .hero-subtitle {
-      font-size: 1.2rem;
+    .text-accent {
+      color: var(--color-secondary);
+      text-shadow: 0 0 10px var(--color-highlight-glow);
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
       line-height: 1.6;
-      margin-bottom: 2rem;
-      opacity: 0.9;
+      margin-bottom: var(--spacing-xl);
+      color: var(--color-text-secondary);
     }
 
-    .hero-image {
+    .hero-cta {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .btn-icon {
+      margin-left: var(--spacing-xs);
+      transition: transform var(--transition-normal);
+    }
+
+    .btn:hover .btn-icon {
+      transform: translateX(5px);
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      padding: var(--spacing-md);
+      background: rgba(10, 10, 10, 0.5);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .stat-item {
+      text-align: center;
+      flex: 1;
+    }
+
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--color-text-secondary);
+      letter-spacing: 1px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, var(--color-primary), transparent);
+      margin: 0 var(--spacing-md);
+    }
+
+    .hero-visual {
       flex: 1;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-    }
-
-    .image-placeholder {
-      width: 400px;
-      height: 400px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      display: flex;
       justify-content: center;
-      align-items: center;
-    }
-
-    .placeholder-icon {
-      font-size: 8rem;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .btn {
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background-color: #e74c3c;
-      color: white;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #c0392b;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-secondary {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-    }
-
-    .btn-secondary:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      transform: translateY(-3px);
-    }
-
-    .btn-large {
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-    }
-
-    .features-section, .testimonials-section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 3rem;
       position: relative;
     }
 
-    h2:after {
+    .logo-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation: float 6s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-glow);
+      border-radius: 50%;
+      filter: blur(30px);
+      opacity: 0.7;
+      z-index: 1;
+      animation: glow 4s ease-in-out infinite;
+    }
+
+    .hieroglyphs {
+      font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+      color: var(--color-gold);
+      opacity: 0.3;
+      letter-spacing: 5px;
+      font-size: 1.5rem;
+      position: absolute;
+      white-space: nowrap;
+    }
+
+    .top-hieroglyphs {
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%) rotate(-5deg);
+    }
+
+    .bottom-hieroglyphs {
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%) rotate(5deg);
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: var(--spacing-xxl) 0;
+      background-color: var(--color-bg-medium);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .features-section::before {
       content: '';
       position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50px;
-      height: 3px;
-      background-color: #e74c3c;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-md);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-xxl);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      gap: var(--spacing-xl);
+      margin-bottom: var(--spacing-xxl);
     }
 
     .feature-card {
-      background-color: #f8f9fa;
-      border-radius: 15px;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
+      background: rgba(10, 10, 10, 0.5);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      padding: var(--spacing-xl);
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 0;
+      background: var(--gradient-primary);
+      transition: height var(--transition-normal);
     }
 
     .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-card:hover::before {
+      height: 100%;
     }
 
     .feature-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-md);
     }
 
-    .feature-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #2c3e50;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .testimonial-card {
-      background-color: white;
-      border-radius: 15px;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    .feature-title {
+      font-size: 1.3rem;
+      margin-bottom: var(--spacing-md);
       position: relative;
+      padding-bottom: var(--spacing-sm);
     }
 
-    .testimonial-card:before {
-      content: '"';
+    .feature-title::after {
+      content: '';
       position: absolute;
-      top: 10px;
-      left: 20px;
-      font-size: 4rem;
-      color: rgba(231, 76, 60, 0.1);
-      font-family: Georgia, serif;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: var(--color-primary);
     }
 
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 1rem;
+    .feature-description {
+      color: var(--color-text-secondary);
       line-height: 1.6;
-      position: relative;
-      z-index: 1;
     }
 
-    .testimonial-author {
-      font-weight: 600;
-      color: #e74c3c;
-      text-align: right;
-    }
-
-    .cta-section {
-      background-color: #f8f9fa;
-      padding: 4rem 2rem;
+    .features-cta {
       text-align: center;
-      border-radius: 50px 50px 0 0;
-      margin-top: 4rem;
     }
 
-    .cta-section p {
-      max-width: 600px;
-      margin: 0 auto 2rem;
+    /* CTA Section */
+    .cta-section {
+      padding: var(--spacing-xxl) 0;
+      background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%),
+                  url('/assets/images/cta-bg.jpg') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        linear-gradient(rgba(231, 76, 60, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(231, 76, 60, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: 1;
+      opacity: 0.2;
+    }
+
+    .cta-content {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-lg);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .cta-description {
       font-size: 1.2rem;
-      opacity: 0.8;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .btn-large {
+      padding: var(--spacing-md) var(--spacing-xxl);
+      font-size: 1.1rem;
     }
 
     @media (max-width: 768px) {
-      .hero-section {
+      .hero-content {
         flex-direction: column;
         text-align: center;
-        padding: 3rem 1rem;
       }
 
-      .hero-content {
-        margin-bottom: 2rem;
+      .hero-text {
+        margin-bottom: var(--spacing-xxl);
       }
 
-      .image-placeholder {
-        width: 300px;
-        height: 300px;
+      .hero-title {
+        font-size: 2.2rem;
       }
 
-      .cta-buttons {
+      .hero-cta {
         justify-content: center;
       }
 
-      h1 {
-        font-size: 2rem;
+      .hero-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
       }
 
-      .features-grid, .testimonials-grid {
+      .stat-divider {
+        width: 50px;
+        height: 1px;
+        margin: 0;
+      }
+
+      .features-grid {
         grid-template-columns: 1fr;
+      }
+
+      .cta-title {
+        font-size: 2rem;
       }
     }
   `]
 })
-export class HomeComponent {
-}
+export class HomeComponent {}

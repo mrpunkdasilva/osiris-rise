@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <!-- Definições -->
+  <defs>
+    <!-- Gradientes -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    
+    <!-- Padrões -->
+    <pattern id="gridPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0,0 L40,0 L40,40 L0,40 L0,0" fill="url(#bgGradient)" />
+      <path d="M40,0 L0,40" stroke="rgba(231, 76, 60, 0.1)" stroke-width="1" />
+      <path d="M0,0 L40,40" stroke="rgba(231, 76, 60, 0.1)" stroke-width="1" />
+    </pattern>
+    
+    <!-- Filtros -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Fundo base -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  
+  <!-- Padrão de grade -->
+  <rect width="100%" height="100%" fill="url(#gridPattern)" opacity="0.5" />
+  
+  <!-- Elementos decorativos -->
+  <g opacity="0.2">
+    <!-- Círculos abstratos -->
+    <circle cx="200" cy="300" r="150" fill="none" stroke="#e74c3c" stroke-width="2" />
+    <circle cx="1000" cy="200" r="100" fill="none" stroke="#e74c3c" stroke-width="2" />
+    <circle cx="600" cy="500" r="200" fill="none" stroke="#e74c3c" stroke-width="2" />
+    
+    <!-- Linhas abstratas -->
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#e74c3c" stroke-width="1" opacity="0.1" />
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#e74c3c" stroke-width="1" opacity="0.1" />
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#e74c3c" stroke-width="1" opacity="0.1" />
+    
+    <!-- Símbolos egípcios estilizados -->
+    <path d="M100,100 L150,100 M125,75 L125,125" stroke="#e74c3c" stroke-width="2" opacity="0.3" />
+    <path d="M900,400 L950,400 M925,375 L925,425" stroke="#e74c3c" stroke-width="2" opacity="0.3" />
+    <path d="M300,500 L350,500 M325,475 L325,525" stroke="#e74c3c" stroke-width="2" opacity="0.3" />
+    <path d="M700,200 L750,200 M725,175 L725,225" stroke="#e74c3c" stroke-width="2" opacity="0.3" />
+    
+    <!-- Ankh estilizado -->
+    <path d="M600,100 C600,100, 580,100, 580,120 C580,140, 600,150, 600,170 L600,200" 
+          fill="none" stroke="#e74c3c" stroke-width="2" opacity="0.3" />
+    <circle cx="600" cy="120" r="15" fill="none" stroke="#e74c3c" stroke-width="2" opacity="0.3" />
+  </g>
+  
+  <!-- Pontos brilhantes -->
+  <g filter="url(#glow)">
+    <circle cx="200" cy="100" r="2" fill="#e74c3c" opacity="0.6" />
+    <circle cx="400" cy="300" r="2" fill="#e74c3c" opacity="0.6" />
+    <circle cx="600" cy="200" r="2" fill="#e74c3c" opacity="0.6" />
+    <circle cx="800" cy="400" r="2" fill="#e74c3c" opacity="0.6" />
+    <circle cx="1000" cy="100" r="2" fill="#e74c3c" opacity="0.6" />
+    <circle cx="100" cy="500" r="2" fill="#e74c3c" opacity="0.6" />
+    <circle cx="900" cy="500" r="2" fill="#e74c3c" opacity="0.6" />
+  </g>
+</svg>

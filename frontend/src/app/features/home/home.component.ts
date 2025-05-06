@@ -384,6 +384,7 @@ import { RouterLink } from '@angular/router';
       transition: all var(--transition-normal);
       position: relative;
       overflow: hidden;
+      border-radius: var(--border-radius-md);
     }
 
     .feature-card::before {
@@ -409,6 +410,11 @@ import { RouterLink } from '@angular/router';
     .feature-icon {
       font-size: 2.5rem;
       margin-bottom: var(--spacing-md);
+      transition: transform var(--transition-normal);
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.2);
     }
 
     .feature-title {
@@ -426,6 +432,11 @@ import { RouterLink } from '@angular/router';
       width: 30px;
       height: 2px;
       background: var(--color-primary);
+      transition: width var(--transition-normal);
+    }
+
+    .feature-card:hover .feature-title::after {
+      width: 50px;
     }
 
     .feature-description {
@@ -444,6 +455,8 @@ import { RouterLink } from '@angular/router';
                   url('/assets/images/cta-bg.jpg') center/cover no-repeat;
       position: relative;
       overflow: hidden;
+      border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+      margin-top: var(--spacing-xl);
     }
 
     .cta-section::before {
@@ -459,6 +472,7 @@ import { RouterLink } from '@angular/router';
       background-size: 30px 30px;
       z-index: 1;
       opacity: 0.2;
+      animation: gridMove 20s linear infinite;
     }
 
     .cta-content {
@@ -467,6 +481,17 @@ import { RouterLink } from '@angular/router';
       z-index: 2;
       max-width: 800px;
       margin: 0 auto;
+      padding: var(--spacing-xl);
+      background: rgba(10, 10, 10, 0.5);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: var(--border-radius-lg);
+      transform: translateY(0);
+      transition: transform var(--transition-normal);
+    }
+
+    .cta-content:hover {
+      transform: translateY(-5px);
     }
 
     .cta-title {
@@ -513,7 +538,7 @@ import { RouterLink } from '@angular/router';
       .stat-divider {
         width: 50px;
         height: 1px;
-        margin: 0;
+        margin: var(--spacing-sm) 0;
       }
 
       .features-grid {
@@ -522,6 +547,18 @@ import { RouterLink } from '@angular/router';
 
       .cta-title {
         font-size: 2rem;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
       }
     }
   `]

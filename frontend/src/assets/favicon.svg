@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Fundo circular com gradiente -->
+  <!-- Definições -->
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#e74c3c" />
@@ -14,15 +14,15 @@
   <!-- Círculo de fundo -->
   <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" />
 
-  <!-- Anel externo (estilo egípcio) -->
+  <!-- Anel externo -->
   <circle cx="100" cy="100" r="95" fill="none" stroke="#FFC107" stroke-width="5" />
 
-  <!-- Símbolo Ankh (símbolo egípcio da vida) estilizado -->
+  <!-- Símbolo Ankh -->
   <path d="M100 40 C100 40, 80 40, 80 60 C80 80, 100 90, 100 110 L100 150"
         fill="none" stroke="#FFD54F" stroke-width="8" stroke-linecap="round" />
   <circle cx="100" cy="60" r="20" fill="none" stroke="#FFD54F" stroke-width="8" />
 
-  <!-- Raios de sol nascente (simbolizando renascimento) -->
+  <!-- Raios de sol nascente -->
   <path d="M60 130 C60 130, 100 90, 140 130"
         fill="none" stroke="url(#sunriseGradient)" stroke-width="8" stroke-linecap="round" />
 </svg>

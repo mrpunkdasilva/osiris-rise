@@ -30,11 +30,11 @@ export class SeoService {
       if (data['title']) {
         this.updateTitle(data['title']);
       }
-      
+
       if (data['description']) {
         this.updateDescription(data['description']);
       }
-      
+
       if (data['ogImage']) {
         this.updateOgImage(data['ogImage']);
       }
@@ -63,9 +63,10 @@ export class SeoService {
   updateCanonicalUrl(url?: string): void {
     const canURL = url || this.router.url;
     const fullUrl = `https://osirisrise.com${canURL}`;
-    
-    let link: HTMLLinkElement = this.metaService.getTag('rel="canonical"')?.element as HTMLLinkElement;
-    
+
+    // Corrigindo o método para obter e atualizar a tag canônica
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+
     if (link) {
       link.href = fullUrl;
     } else {

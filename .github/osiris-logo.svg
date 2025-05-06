@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Definições ultra avançadas -->
+  <defs>
+    <!-- Gradientes complexos -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e74c3c">
+        <animate attributeName="stop-color" values="#e74c3c;#c0392b;#e74c3c" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#d35400">
+        <animate attributeName="stop-color" values="#d35400;#e67e22;#d35400" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#c0392b">
+        <animate attributeName="stop-color" values="#c0392b;#e74c3c;#c0392b" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <animate attributeName="x1" values="0%;20%;0%" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="0%;20%;0%" dur="10s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <radialGradient id="coreGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFC107" stop-opacity="0.8">
+        <animate attributeName="stop-opacity" values="0.8;0.4;0.8" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#e74c3c" stop-opacity="0" />
+      <animate attributeName="fx" values="50%;45%;55%;50%" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="fy" values="50%;45%;55%;50%" dur="7s" repeatCount="indefinite" />
+    </radialGradient>
+
+    <linearGradient id="sunriseGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFA000">
+        <animate attributeName="stop-color" values="#FFA000;#FF8F00;#FFA000" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#FFB74D" />
+      <stop offset="100%" stop-color="#FFC107">
+        <animate attributeName="stop-color" values="#FFC107;#FFCA28;#FFC107" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <animate attributeName="x2" values="0%;20%;0%" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="ankhGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD54F" />
+      <stop offset="50%" stop-color="#FFECB3" />
+      <stop offset="100%" stop-color="#FFD54F" />
+      <animate attributeName="x1" values="0%;100%;0%" dur="5s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <!-- Filtros avançados -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="powerfulGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feFlood flood-color="#FFC107" flood-opacity="0.5" result="glowColor" />
+      <feComposite in="glowColor" in2="blur" operator="in" result="softGlow" />
+      <feComposite in="SourceGraphic" in2="softGlow" operator="over" />
+    </filter>
+
+    <!-- Máscaras e clipping paths -->
+    <mask id="revealMask">
+      <rect x="0" y="0" width="200" height="200" fill="white">
+        <animate attributeName="y" from="200" to="0" dur="2s" begin="0s" fill="freeze" />
+      </rect>
+    </mask>
+
+    <clipPath id="circleMask">
+      <circle cx="100" cy="100" r="95" />
+    </clipPath>
+
+    <!-- Padrões -->
+    <pattern id="hieroglyphPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M5,10 L15,10 M10,5 L10,15" stroke="#FFC107" stroke-width="1" opacity="0.6" />
+      <path d="M3,3 L7,7 M13,3 L17,7 M3,17 L7,13 M13,17 L17,13" stroke="#FFC107" stroke-width="0.5" opacity="0.4" />
+    </pattern>
+
+    <!-- Símbolos reutilizáveis -->
+    <symbol id="star" viewBox="0 0 10 10">
+      <polygon points="5,0 6.5,3.5 10,4 7.5,6.5 8,10 5,8 2,10 2.5,6.5 0,4 3.5,3.5" fill="white" />
+    </symbol>
+  </defs>
+
+  <!-- Fundo com efeito de pulsação -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" mask="url(#revealMask)">
+    <animate attributeName="r" values="95;90;95" dur="4s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Núcleo energético -->
+  <circle cx="100" cy="100" r="60" fill="url(#coreGradient)" opacity="0.7">
+    <animate attributeName="r" values="60;65;60" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;0.5;0.7" dur="6s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Brilho de fundo -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="15" filter="url(#glow)" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Linhas de energia -->
+  <g clip-path="url(#circleMask)">
+    <line x1="0" y1="100" x2="200" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1">
+      <animate attributeName="y1" values="100;90;110;100" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="100;110;90;100" dur="7s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="0" x2="100" y2="200" stroke="rgba(255,255,255,0.2)" stroke-width="1">
+      <animate attributeName="x1" values="100;90;110;100" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100;110;90;100" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="30" y1="30" x2="170" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1">
+      <animate attributeName="x1" values="30;40;30" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="30;40;30" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="170;160;170" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="170;160;170" dur="9s" repeatCount="indefinite" />
+    </line>
+    <line x1="170" y1="30" x2="30" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1">
+      <animate attributeName="x1" values="170;160;170" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="30;40;30" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="30;40;30" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="170;160;170" dur="10s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- Anel externo com padrão hieroglífico -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#hieroglyphPattern)" stroke-width="8" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.6;0.8" dur="8s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Anel externo com rotação -->
+  <circle id="outerRing" cx="100" cy="100" r="95" fill="none" stroke="#FFC107" stroke-width="5" stroke-dasharray="5,3,1,3" filter="url(#glow)">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="30s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Anel secundário com rotação inversa -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#e74c3c" stroke-width="1" stroke-dasharray="1,10" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="20s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Símbolo Ankh estilizado -->
+  <path id="ankh" d="M100 40 C100 40, 80 40, 80 60 C80 80, 100 90, 100 110 L100 150"
+        fill="none" stroke="url(#ankhGradient)" stroke-width="8" stroke-linecap="round" filter="url(#powerfulGlow)">
+    <animate attributeName="stroke-width" values="8;10;8" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="filter" values="url(#powerfulGlow);url(#glow);url(#powerfulGlow)" dur="5s" repeatCount="indefinite" />
+  </path>
+
+  <circle cx="100" cy="60" r="20" fill="none" stroke="url(#ankhGradient)" stroke-width="8" filter="url(#powerfulGlow)">
+    <animate attributeName="r" values="20;18;20" dur="3s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Raios de sol nascente com efeito de onda -->
+  <path id="sunrays" d="M60 130 C60 130, 100 90, 140 130"
+        fill="none" stroke="url(#sunriseGradient)" stroke-width="8" stroke-linecap="round" filter="url(#glow)">
+    <animate attributeName="d"
+             values="M60 130 C60 130, 100 90, 140 130;
+                     M60 135 C60 135, 100 85, 140 135;
+                     M60 130 C60 130, 100 90, 140 130"
+             dur="5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0.7;1" dur="4s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Constelação de estrelas com brilho dinâmico -->
+  <g filter="url(#glow)">
+    <circle cx="70" cy="70" r="3" fill="#FFFFFF">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3;4;3" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="130" cy="70" r="3" fill="#FFFFFF">
+      <animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3;4;3" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="50" cy="100" r="2" fill="#FFFFFF">
+      <animate attributeName="opacity" values="1;0.2;1" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2;3;2" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="150" cy="100" r="2" fill="#FFFFFF">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2;3;2" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="60" cy="50" r="2" fill="#FFFFFF">
+      <animate attributeName="opacity" values="1;0.2;1" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2;3;2" dur="4.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="140" cy="50" r="2" fill="#FFFFFF">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2;3;2" dur="3.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Estrelas especiais usando o símbolo -->
+  <use xlink:href="#star" x="85" y="40" width="10" height="10" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3.2s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="115" y="160" width="10" height="10" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.5s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="160" y="80" width="10" height="10" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3.8s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="40" y="120" width="10" height="10" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.0;0.5" dur="4.1s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="130" y="130" width="10" height="10" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="4.4s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="60" y="60" width="10" height="10" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="4.7s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="180" y="180" width="10" height="10" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="5s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="20" y="20" width="10" height="10" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="5.3s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="150" y="30" width="10" height="10" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.0;0.5" dur="5.6s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="30" y="170" width="10" height="10" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.0;0.4" dur="5.9s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="170" y="30" width="10" height="10" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.0;0.3" dur="6.2s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="30" y="30" width="10" height="10" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.0;0.2" dur="6.5s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="170" y="170" width="10" height="10" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.0;0.1" dur="6.8s" repeatCount="indefinite" />
+  </use>
+  <use xlink:href="#star" x="100" y="100" width="10" height="10" opacity="0.0">
+    <animate attributeName="opacity" values="0.0;0.0;0.0" dur="7s" repeatCount="indefinite" />
+  </use>
+</svg>
